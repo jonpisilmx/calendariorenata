@@ -176,17 +176,22 @@
 
         .month-header {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 15px;
+            margin-top: 10px;
             text-transform: uppercase;
             color: var(--accent-terracotta);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 10px;
+            margin-bottom: 30px;
         }
 
         .day-label {
@@ -214,7 +219,7 @@
         .cal-day.empty {
             background: #EAEAEA;
             border-style: dashed;
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         .cal-day.active {
@@ -455,7 +460,7 @@
     <div class="hero-bento">
         <div class="bento-box box-main">
             <h1>Estrategia de Contenidos</h1>
-            <p>Propuesta editorial para Instagram. Diseñada para posicionar al Hotel <strong>Hotel Renata</strong>, impulsando el Day Pass ($100 MXN), la barra de mezcalitas y las reservaciones directas.</p>
+            <p>Propuesta editorial para Instagram. Diseñada para posicionar al <strong>Hotel Renata</strong>, impulsando el Day Pass ($100 MXN), la barra de mezcalitas y las reservaciones directas.</p>
         </div>
         <div class="bento-box box-green">
             <h3>8 Habitaciones</h3>
@@ -467,13 +472,17 @@
         </div>
     </div>
 
-    <!-- Calendar View -->
+    <!-- Calendar View Section -->
     <div class="section-title">Calendario Mensual (Publicaciones: Lun - Mié - Vie)</div>
     
     <div class="calendar-wrapper">
-        <div class="month-header">Septiembre / Octubre 2026</div>
+        <!-- MES 1: SEPTIEMBRE 2026 -->
+        <div class="month-header">
+            <span>Septiembre 2026</span>
+            <span style="font-size: 0.9rem; color: #666;">Semana 1 a 3 de la campaña</span>
+        </div>
         <div class="calendar-grid">
-            <!-- Day labels -->
+            <!-- Headers -->
             <div class="day-label">LUN</div>
             <div class="day-label">MAR</div>
             <div class="day-label">MIÉ</div>
@@ -482,84 +491,147 @@
             <div class="day-label">SÁB</div>
             <div class="day-label">DOM</div>
 
-            <!-- Calendar Days -->
+            <!-- Septiembre 2026 inicia en Martes (1 de Sept es Martes) -->
+            <div class="cal-day empty"><span class="day-number">31 Aug</span></div>
+            <div class="cal-day empty"><span class="day-number">01</span></div>
+            <div class="cal-day empty"><span class="day-number">02</span></div>
+            <div class="cal-day empty"><span class="day-number">03</span></div>
+            <div class="cal-day empty"><span class="day-number">04</span></div>
+            <div class="cal-day empty"><span class="day-number">05</span></div>
+            <div class="cal-day empty"><span class="day-number">06</span></div>
+
+            <div class="cal-day empty"><span class="day-number">07</span></div>
+            <div class="cal-day empty"><span class="day-number">08</span></div>
+            <div class="cal-day empty"><span class="day-number">09</span></div>
+            <div class="cal-day empty"><span class="day-number">10</span></div>
+            <div class="cal-day empty"><span class="day-number">11</span></div>
+            <div class="cal-day empty"><span class="day-number">12</span></div>
+            <div class="cal-day empty"><span class="day-number">13</span></div>
+
             <div class="cal-day empty"><span class="day-number">14</span></div>
             <div class="cal-day empty"><span class="day-number">15</span></div>
             <div class="cal-day empty"><span class="day-number">16</span></div>
             <div class="cal-day empty"><span class="day-number">17</span></div>
             <div class="cal-day empty"><span class="day-number">18</span></div>
             
-            <!-- Start of Campaign -->
+            <!-- Inicio de Campaña: Sábado 19 Sept -->
             <div class="cal-day active">
-                <span class="day-number">19 S</span>
+                <span class="day-number">19</span>
                 <span class="cal-badge bg-promo">Pub #1</span>
             </div>
             <div class="cal-day empty"><span class="day-number">20</span></div>
 
+            <!-- Semana 2 -->
             <div class="cal-day active">
-                <span class="day-number">21 L</span>
+                <span class="day-number">21</span>
                 <span class="cal-badge bg-promo">Pub #2</span>
             </div>
             <div class="cal-day empty"><span class="day-number">22</span></div>
             <div class="cal-day active">
-                <span class="day-number">23 M</span>
+                <span class="day-number">23</span>
                 <span class="cal-badge bg-reserva">Pub #3</span>
             </div>
             <div class="cal-day empty"><span class="day-number">24</span></div>
             <div class="cal-day active">
-                <span class="day-number">25 V</span>
+                <span class="day-number">25</span>
                 <span class="cal-badge bg-reserva">Pub #4</span>
             </div>
             <div class="cal-day empty"><span class="day-number">26</span></div>
             <div class="cal-day empty"><span class="day-number">27</span></div>
 
+            <!-- Semana 3 -->
             <div class="cal-day active">
-                <span class="day-number">28 L</span>
+                <span class="day-number">28</span>
                 <span class="cal-badge bg-reserva">Pub #5</span>
             </div>
             <div class="cal-day empty"><span class="day-number">29</span></div>
             <div class="cal-day active">
-                <span class="day-number">30 M</span>
+                <span class="day-number">30</span>
                 <span class="cal-badge bg-reserva">Pub #6</span>
             </div>
+            <!-- Relleno de fin de semana de Septiembre en cuadrícula -->
+            <div class="cal-day empty"><span class="day-number">01 Oct</span></div>
+            <div class="cal-day empty"><span class="day-number">02 Oct</span></div>
+            <div class="cal-day empty"><span class="day-number">03 Oct</span></div>
+            <div class="cal-day empty"><span class="day-number">04 Oct</span></div>
+        </div>
+
+        <!-- MES 2: OCTUBRE 2026 -->
+        <div class="month-header" style="border-top: 2px dashed var(--border-dark); padding-top: 25px;">
+            <span>Octubre 2026</span>
+            <span style="font-size: 0.9rem; color: #666;">Semana 3 a 5 de la campaña</span>
+        </div>
+        <div class="calendar-grid">
+            <!-- Headers -->
+            <div class="day-label">LUN</div>
+            <div class="day-label">MAR</div>
+            <div class="day-label">MIÉ</div>
+            <div class="day-label">JUE</div>
+            <div class="day-label">VIE</div>
+            <div class="day-label">SÁB</div>
+            <div class="day-label">DOM</div>
+
+            <!-- Octubre 2026 inicia en Jueves (1 de Oct es Jueves) -->
+            <div class="cal-day empty"><span class="day-number">28 Sep</span></div>
+            <div class="cal-day empty"><span class="day-number">29 Sep</span></div>
+            <div class="cal-day empty"><span class="day-number">30 Sep</span></div>
+            <div class="cal-day empty"><span class="day-number">01</span></div>
             <div class="cal-day active">
-                <span class="day-number">02 V</span>
+                <span class="day-number">02</span>
                 <span class="cal-badge bg-bar">Pub #7</span>
             </div>
             <div class="cal-day empty"><span class="day-number">03</span></div>
             <div class="cal-day empty"><span class="day-number">04</span></div>
-            <div class="cal-day empty"><span class="day-number">05</span></div>
 
+            <!-- Semana 4 -->
             <div class="cal-day active">
-                <span class="day-number">05 L</span>
+                <span class="day-number">05</span>
                 <span class="cal-badge bg-bar">Pub #8</span>
             </div>
             <div class="cal-day empty"><span class="day-number">06</span></div>
             <div class="cal-day active">
-                <span class="day-number">07 M</span>
+                <span class="day-number">07</span>
                 <span class="cal-badge bg-bar">Pub #9</span>
             </div>
             <div class="cal-day empty"><span class="day-number">08</span></div>
             <div class="cal-day active">
-                <span class="day-number">09 V</span>
+                <span class="day-number">09</span>
                 <span class="cal-badge bg-bar">Pub #10</span>
             </div>
             <div class="cal-day empty"><span class="day-number">10</span></div>
             <div class="cal-day empty"><span class="day-number">11</span></div>
 
+            <!-- Semana 5 -->
             <div class="cal-day active">
-                <span class="day-number">12 L</span>
+                <span class="day-number">12</span>
                 <span class="cal-badge bg-reserva">Pub #11</span>
             </div>
             <div class="cal-day empty"><span class="day-number">13</span></div>
             <div class="cal-day active">
-                <span class="day-number">14 M</span>
+                <span class="day-number">14</span>
                 <span class="cal-badge bg-promo">Pub #12</span>
             </div>
             <div class="cal-day empty"><span class="day-number">15</span></div>
             <div class="cal-day empty"><span class="day-number">16</span></div>
             <div class="cal-day empty"><span class="day-number">17</span></div>
             <div class="cal-day empty"><span class="day-number">18</span></div>
+
+            <!-- Resto de Octubre -->
+            <div class="cal-day empty"><span class="day-number">19</span></div>
+            <div class="cal-day empty"><span class="day-number">20</span></div>
+            <div class="cal-day empty"><span class="day-number">21</span></div>
+            <div class="cal-day empty"><span class="day-number">22</span></div>
+            <div class="cal-day empty"><span class="day-number">23</span></div>
+            <div class="cal-day empty"><span class="day-number">24</span></div>
+            <div class="cal-day empty"><span class="day-number">25</span></div>
+
+            <div class="cal-day empty"><span class="day-number">26</span></div>
+            <div class="cal-day empty"><span class="day-number">27</span></div>
+            <div class="cal-day empty"><span class="day-number">28</span></div>
+            <div class="cal-day empty"><span class="day-number">29</span></div>
+            <div class="cal-day empty"><span class="day-number">30</span></div>
+            <div class="cal-day empty"><span class="day-number">31</span></div>
+            <div class="cal-day empty"><span class="day-number">01 Nov</span></div>
         </div>
     </div>
 
@@ -982,7 +1054,7 @@
 <!-- Modal 10 -->
 <div class="modal-overlay" id="modal-10">
     <div class="modal-content">
-        <button class="modal-close" onclick="closeModal('modal-10')">&times;</button>
+        <button class="modal-close" onclick="closeModal('modal-close')">&times;</button>
         <span class="modal-badge" style="background: #FFF3CD;">Barra de Bebidas</span>
         <h2 class="modal-title">10. Propósito de Comer Más Fruta</h2>
         <div class="script-box">
